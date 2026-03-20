@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>Expense Tracker Dashboard</h1>
+     <!-- Expense Cards -->
+    <div id="expenseCards" class="cards-container"></div>
+    <!-- Chart -->
+    <canvas id="expenseChart" width="400" height="200"></canvas>
+    <select id="categoryFilter"><option value="all">All</option></select>
+    <h2 id="totalAmount">Total: ₹0</h2>
+
+    <!-- Filter -->
+    <div class="filter-container">
+        <label for="categoryFilter">Filter by Category:</label>
+        <select id="categoryFilter">
+            <option value="all">All</option>
+        </select>
+    </div>
+
+    <a href="index.html" class="btn">Add More Expenses</a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

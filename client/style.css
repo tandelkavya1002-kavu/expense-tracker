@@ -1,0 +1,167 @@
+/* ===============================
+    Global Styles
+=================================*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* pastel gradient */
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* ===============================
+    Containers
+=================================*/
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+/* Smaller container for Add Expense page */
+.container-small {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 25px;
+}
+
+/* ===============================
+    Headings
+=================================*/
+h1, h2 {
+    text-align: center;
+    color: #00796b; /* soft teal */
+}
+
+/* ===============================
+    Filters / Selects
+=================================*/
+.filter-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+select, input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #b2dfdb;
+    background: #e0f2f1; /* soft pastel input */
+    color: #004d40;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+select:hover, input[type="text"]:hover, input[type="number"]:hover {
+    border-color: #26a69a;
+}
+
+select:focus, input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #26a69a;
+    box-shadow: 0 0 5px rgba(38,166,154,0.4);
+    outline: none;
+}
+
+/* ===============================
+    Cards
+=================================*/
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.expense-card {
+    background: #e0f7fa; /* soft pastel blue */
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.expense-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.expense-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #00695c;
+}
+
+.expense-card p {
+    margin: 5px 0;
+    color: #004d40;
+}
+
+.expense-card button {
+    margin-top: 8px;
+    margin-right: 5px;
+    padding: 5px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn { background: #26a69a; color: #fff; }
+.delete-btn { background: #ef5350; color: #fff; }
+
+/* ===============================
+    Buttons / Links
+=================================*/
+a.btn, button {
+    display: block;
+    text-align: center;
+    background: #26a69a;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a.btn:hover, button:hover { 
+    background: #00897b;
+    transform: scale(1.05);
+}
+
+/* Back button link */
+a.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+a.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* ===============================
+    Chart
+=================================*/
+canvas {
+    margin: 25px 0;
+    border-radius: 18px;
+}
+
+/* ===============================
+    Messages / Totals
+=================================*/
+#message, #totalAmount {
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+}
+
+#totalAmount { color: #00796B; font-size: 22px; }

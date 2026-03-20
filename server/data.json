@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1774026941251,
+    "title": "food",
+    "amount": 300,
+    "category": "daily"
+  },
+  {
+    "id": 1774026955539,
+    "title": "clothes",
+    "amount": 3000,
+    "category": "yearly"
+  },
+  {
+    "id": 1774026987946,
+    "title": "body wash",
+    "amount": 400,
+    "category": "monthly"
+  },
+  {
+    "id": 1774028358244,
+    "title": "bags",
+    "amount": 5000,
+    "category": "yearly"
+  },
+  {
+    "id": 1774029997990,
+    "title": "notebook",
+    "amount": 200,
+    "category": "monthly"
+  }
+]
