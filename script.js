@@ -36,6 +36,9 @@ if (form) {
 
         // Reload dashboard if open
         if (document.getElementById('expenseCards')) loadExpenses();
+
+                // Redirect to dashboard page
+window.location.href = 'dashboard.html';
     });
 }
 

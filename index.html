@@ -1,33 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Add Expense</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Tracker</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="container">
-    <h1>Add New Expense</h1>
-
+    <h1>Expense Tracker</h1>
+    
     <form id="expenseForm">
-        <div>
-            <label for="title">Title:</label><br>
-            <input type="text" id="title" required>
-        </div>
-        <div>
-            <label for="amount">Amount (₹):</label><br>
-            <input type="number" id="amount" required>
-        </div>
-        <div>
-            <label for="category">Category:</label><br>
-            <input type="text" id="category" required>
-        </div>
+        <input type="text" id="title" placeholder="Expense Title" required>
+        <input type="number" id="amount" placeholder="Amount (₹)" required>
+        <input type="text" id="category" placeholder="Category" required>
         <button type="submit">Add Expense</button>
     </form>
 
-    <p id="message" style="color:green; margin-top:10px;"></p>
+    <p id="message"></p>
 
-    <a href="dashboard.html">Go to Dashboard</a>
+    <a href="dashboard.html" class="dashboard-link">Go to Dashboard</a>
 </div>
 
 <script src="script.js"></script>

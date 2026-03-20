@@ -3,68 +3,92 @@
 =================================*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* pastel gradient */
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(135deg, #72EDF2, #5151E5);
     min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* ===============================
     Containers
 =================================*/
 .container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: rgba(255,255,255,0.95);
-    padding: 30px;
-    border-radius: 20px;
+    background: #fff;
+    padding: 30px 40px;
+    border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    backdrop-filter: blur(5px);
-}
-
-/* Smaller container for Add Expense page */
-.container-small {
-    max-width: 500px;
-    margin: 50px auto;
-    padding: 30px 25px;
+    width: 350px;
+    text-align: center;
 }
 
 /* ===============================
     Headings
 =================================*/
-h1, h2 {
-    text-align: center;
-    color: #00796b; /* soft teal */
+h1 {
+    margin-bottom: 25px;
+    color: #333;
 }
 
 /* ===============================
-    Filters / Selects
+    Form Inputs
 =================================*/
-.filter-container {
-    margin: 20px 0;
-    text-align: center;
-}
-
-select, input[type="text"], input[type="number"] {
+form input {
     width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 18px;
-    border-radius: 10px;
-    border: 1px solid #b2dfdb;
-    background: #e0f2f1; /* soft pastel input */
-    color: #004d40;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
     font-size: 16px;
-    transition: 0.3s;
+    transition: all 0.3s;
 }
 
-select:hover, input[type="text"]:hover, input[type="number"]:hover {
-    border-color: #26a69a;
-}
-
-select:focus, input[type="text"]:focus, input[type="number"]:focus {
-    border-color: #26a69a;
-    box-shadow: 0 0 5px rgba(38,166,154,0.4);
+form input:focus {
+    border-color: #5151E5;
+    box-shadow: 0 0 8px rgba(81, 81, 229, 0.3);
     outline: none;
+}
+
+/* ===============================
+    Buttons
+=================================*/
+form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #5151E5;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+form button:hover {
+    background-color: #3838b0;
+}
+
+#message {
+    margin-top: 15px;
+    color: green;
+    font-weight: bold;
+}
+
+/* ===============================
+    Dashboard link
+=================================*/
+.dashboard-link {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #5151E5;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.dashboard-link:hover {
+    color: #3838b0;
 }
 
 /* ===============================
@@ -78,7 +102,7 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
 }
 
 .expense-card {
-    background: #e0f7fa; /* soft pastel blue */
+    background: #44bac9;
     padding: 18px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -115,39 +139,6 @@ select:focus, input[type="text"]:focus, input[type="number"]:focus {
 .delete-btn { background: #ef5350; color: #fff; }
 
 /* ===============================
-    Buttons / Links
-=================================*/
-a.btn, button {
-    display: block;
-    text-align: center;
-    background: #26a69a;
-    color: #fff;
-    text-decoration: none;
-    padding: 12px 18px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-a.btn:hover, button:hover { 
-    background: #00897b;
-    transform: scale(1.05);
-}
-
-/* Back button link */
-a.back-btn {
-    display: inline-block;
-    margin-top: 15px;
-    color: #00796b;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-a.back-btn:hover {
-    text-decoration: underline;
-}
-
-/* ===============================
     Chart
 =================================*/
 canvas {
@@ -156,12 +147,11 @@ canvas {
 }
 
 /* ===============================
-    Messages / Totals
+    Total Amount
 =================================*/
-#message, #totalAmount {
+#totalAmount {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 22px;
     text-align: center;
+    color: #00796B;
 }
-
-#totalAmount { color: #00796B; font-size: 22px; }
